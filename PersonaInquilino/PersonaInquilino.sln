@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaInquilino", "PersonaInquilino\PersonaInquilino.csproj", "{DF7F3876-C3FD-4A82-8580-8F558E2BE479}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormAdAlquileres", "FormAdAlquileres\FormAdAlquileres.csproj", "{189D5A82-871F-421C-92F5-6115B0972B3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DF7F3876-C3FD-4A82-8580-8F558E2BE479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF7F3876-C3FD-4A82-8580-8F558E2BE479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF7F3876-C3FD-4A82-8580-8F558E2BE479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189D5A82-871F-421C-92F5-6115B0972B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189D5A82-871F-421C-92F5-6115B0972B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189D5A82-871F-421C-92F5-6115B0972B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189D5A82-871F-421C-92F5-6115B0972B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
