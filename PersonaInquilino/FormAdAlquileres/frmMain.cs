@@ -28,10 +28,6 @@ namespace FormAdAlquileres
 		private void frmMain_Load(object sender, EventArgs e)
 		{
             //Inmueble newInm = new Inmueble("ssss");
-            DateTime ahora = DateTime.Now;
-            lbl_fecha.Text = ahora.ToString();
-
-
         }
 
 		private void button1_Click(object sender, EventArgs e)
@@ -44,5 +40,15 @@ namespace FormAdAlquileres
         {
             //frmAgregarInmueble agrInm = new frmAgregarInmueble()
         }
-    }
+
+		private void lbl_fecha_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			lbl_fecha.Text = "Fecha: " + DateTime.Now.ToString();
+		}
+	}
 }
