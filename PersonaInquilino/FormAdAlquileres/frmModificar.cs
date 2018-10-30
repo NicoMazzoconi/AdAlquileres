@@ -11,9 +11,12 @@ using PersonaInquilino;
 
 namespace FormAdAlquileres
 {
-	public partial class frmModificar : Form
+	public partial class frmModificarInquilino : Form
 	{
-		public frmModificar()
+        private List<Inquilino> inquilinos;
+        private List<Inmueble> inmuebles;
+
+        public frmModificarInquilino()
 		{
 			InitializeComponent();
 		}

@@ -16,6 +16,8 @@ namespace FormAdAlquileres
 		private List<Inquilino> inquilinos;
 		private List<Inmueble> inmuebles;
 
+        
+
 		public frmMain()
 		{
 			InitializeComponent();
@@ -25,13 +27,22 @@ namespace FormAdAlquileres
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			Inmueble newInm = new Inmueble("ssss");
-		}
+            //Inmueble newInm = new Inmueble("ssss");
+            DateTime ahora = DateTime.Now;
+            lbl_fecha.Text = ahora.ToString();
+
+
+        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{
 			frmAgregarInquilino agrInq = new frmAgregarInquilino(inquilinos, inmuebles);
 			agrInq.Show();
 		}
-	}
+
+        private void btn_Propiedad_Click(object sender, EventArgs e)
+        {
+            //frmAgregarInmueble agrInm = new frmAgregarInmueble()
+        }
+    }
 }
