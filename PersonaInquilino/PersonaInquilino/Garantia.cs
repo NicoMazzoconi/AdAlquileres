@@ -10,7 +10,7 @@ namespace PersonaInquilino
 	{
 		private string relacion;
 
-		public Garantia(string nombre, string apellido, int dni, int telefono, Sexo sexo, string domicilio, string email, int edad, string relacion) : base(nombre, apellido, dni, telefono, sexo, email, domicilio, edad)
+		public Garantia(string nombre, string apellido, double dni, double telefono, Sexo sexo, string domicilio, string email, int edad, string relacion) : base(nombre, apellido, dni, telefono, sexo, email, domicilio, edad)
 		{
 			this.relacion = relacion;
 		}
@@ -53,7 +53,7 @@ namespace PersonaInquilino
 			}
 		}
 
-		public override int Dni
+		public override double Dni
 		{
 			get
 			{
@@ -66,7 +66,7 @@ namespace PersonaInquilino
 			}
 		}
 
-		public override int Telefono
+		public override double Telefono
 		{
 			get
 			{

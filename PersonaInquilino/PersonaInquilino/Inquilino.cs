@@ -12,7 +12,7 @@ namespace PersonaInquilino
 		private Contrato contrato;
 
 
-		public Inquilino(string nombre, string apellido, int dni, int telefono, Sexo sexo, string domicilio, string email, int edad, Garantia garantia, Contrato contrato) : base(nombre, apellido, dni, telefono, sexo, email, domicilio, edad)
+		public Inquilino(string nombre, string apellido, double dni, double telefono, Sexo sexo, string domicilio, string email, int edad, Garantia garantia, Contrato contrato) : base(nombre, apellido, dni, telefono, sexo, email, domicilio, edad)
 		{
 			this.garantia = garantia;
 			this.contrato = contrato;
@@ -56,7 +56,7 @@ namespace PersonaInquilino
 			}
 		}
 
-		public override int Dni
+		public override double Dni
 		{
 			get
 			{
@@ -69,7 +69,7 @@ namespace PersonaInquilino
 			}
 		}
 
-		public override int Telefono
+		public override double Telefono
 		{
 			get
 			{

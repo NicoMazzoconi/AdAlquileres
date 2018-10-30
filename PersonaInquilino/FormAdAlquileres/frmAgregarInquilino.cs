@@ -39,10 +39,13 @@ namespace FormAdAlquileres
 			Inmueble inm = null;
 			foreach (Inmueble a in inmuebles)
 			{
-				if (cbInmueble.SelectedValue.ToString() == a.Direccion)
+				if (cbInmueble.Text == a.Direccion)
+				{
 					inm = a;
+					break;
+				}
 			}
-			frmAgregarGarantia garantia = new frmAgregarGarantia(txtNombre.Text, txtApellido.Text, Int32.Parse(txtDni.Text), Int32.Parse(txtTelefono.Text), sexo, txtEmail.Text, txtDomicilio.Text, Int32.Parse(numericUpDown1.Value.ToString()), inquilinos, inm);
+			frmAgregarGarantia garantia = new frmAgregarGarantia(txtNombre.Text, txtApellido.Text, Double.Parse(txtDni.Text), Double.Parse(txtTelefono.Text), sexo, txtEmail.Text, txtDomicilio.Text, int.Parse(numericUpDown1.Value.ToString()), inquilinos, inm);
 			garantia.Show();
 			this.Close();
 		}

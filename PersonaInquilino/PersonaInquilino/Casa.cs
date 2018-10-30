@@ -10,9 +10,9 @@ namespace PersonaInquilino
     {
         private bool quincho;
 
-        public Casa(string direccion, string localidad, Inquilino inquilino, DateTime antiguedad,
-            EEstado estado, float precio, short ambientes, float tamanio, float deposito,
-            bool garaje, bool pileta, bool patio, short baños, bool parrilla, string notas, bool quincho) : base(direccion, localidad, inquilino, antiguedad, estado, precio, ambientes, tamanio, deposito, garaje, pileta, patio, baños, parrilla, notas)
+        public Casa(string direccion, string localidad, DateTime antiguedad,
+            EEstado estado/*, float precio*/, short ambientes, float tamanio, /*float deposito,*/
+            bool garaje, bool pileta, bool patio, short baños, bool parrilla, string notas, bool quincho) : base(direccion, localidad, antiguedad, estado,/* precio,*/ ambientes, tamanio, /*deposito,*/ garaje, pileta, patio, baños, parrilla, notas)
         {
             this.Quincho = quincho;
         }
@@ -48,18 +48,6 @@ namespace PersonaInquilino
             }
         }
 
-        public override Inquilino EInquilino
-        {
-            get
-            {
-                return this.eInquilino;
-            }
-            set
-            {
-                this.eInquilino = value;
-            }
-        }
-
         public override DateTime Antiguedad
         {
             get
@@ -87,7 +75,7 @@ namespace PersonaInquilino
             }
         }
 
-        public override float Precio
+       /* public override float Precio
         {
             get
             {
@@ -100,7 +88,7 @@ namespace PersonaInquilino
                     this.precio = value;
                 }
             }
-        }
+        }*/
 
         public override short Ambientes
         {
@@ -132,7 +120,7 @@ namespace PersonaInquilino
             }
         }
 
-        public override float Deposito
+        /*public override float Deposito
         {
             get
             {
@@ -145,7 +133,7 @@ namespace PersonaInquilino
                     this.deposito = value;
                 }
             }
-        }
+        }*/
 
         public override bool Garaje
         {

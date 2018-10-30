@@ -13,9 +13,9 @@ namespace PersonaInquilino
         private bool balcon;
 
 
-        public Departamento(string direccion, string localidad, Inquilino inquilino, DateTime antiguedad, 
-            EEstado estado, float precio, short ambientes, float tamanio, float deposito,
-            bool garaje, bool pileta, bool patio, short baños, bool parrilla, string notas,short piso,char letra,bool balcon):base(direccion,localidad,inquilino,antiguedad,estado,precio,ambientes,tamanio,deposito,garaje,pileta,patio,baños,parrilla,notas)
+        public Departamento(string direccion, string localidad, DateTime antiguedad, 
+            EEstado estado, /*float precio,*/ short ambientes, float tamanio, /*float deposito,*/
+            bool garaje, bool pileta, bool patio, short baños, bool parrilla, string notas,short piso,char letra,bool balcon):base(direccion,localidad,antiguedad,estado/*,precio*/,ambientes,tamanio,/*deposito,*/garaje,pileta,patio,baños,parrilla,notas)
         {
             this.Piso = piso;
             this.Letra = letra;
@@ -53,7 +53,7 @@ namespace PersonaInquilino
             }
         }
 
-        public override Inquilino EInquilino
+        /*public override Inquilino EInquilino
         {
             get
             {
@@ -63,7 +63,7 @@ namespace PersonaInquilino
             {
                 this.eInquilino = value;
             }
-        }
+        }*/
 
         public override DateTime Antiguedad
         {
@@ -92,7 +92,7 @@ namespace PersonaInquilino
             }
         }
 
-        public override float Precio
+       /* public override float Precio
         {
             get
             {
@@ -105,7 +105,7 @@ namespace PersonaInquilino
                     this.precio = value;
                 }
             }
-        }
+        }*/
 
         public override short Ambientes
         {
@@ -137,7 +137,7 @@ namespace PersonaInquilino
             }
         }
 
-        public override float Deposito
+        /*public override float Deposito
         {
             get
             {
@@ -150,7 +150,7 @@ namespace PersonaInquilino
                     this.deposito = value;
                 }
             }
-        }
+        }*/
 
         public override bool Garaje
         {

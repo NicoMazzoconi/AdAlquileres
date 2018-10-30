@@ -70,11 +70,11 @@
     <Compile Include="frmAgregarInquilino.Designer.cs">
       <DependentUpon>frmAgregarInquilino.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModificar.cs">
+    <Compile Include="frmModificarInquilino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificar.Designer.cs">
-      <DependentUpon>frmModificar.cs</DependentUpon>
+    <Compile Include="frmModificarInquilino.Designer.cs">
+      <DependentUpon>frmModificarInquilino.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -105,8 +105,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModificar.resx">
-      <DependentUpon>frmModificar.cs</DependentUpon>
+    <EmbeddedResource Include="frmModificarInquilino.resx">
+      <DependentUpon>frmModificarInquilino.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarInfoCompleta.resx">
       <DependentUpon>frmMostrarInfoCompleta.cs</DependentUpon>

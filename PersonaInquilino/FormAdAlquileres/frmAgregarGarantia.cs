@@ -15,8 +15,8 @@ namespace FormAdAlquileres
 	{
 		private string nombreInq;
 		private string apellidoInq;
-		private int dniInq;
-		private int telefonoInq;
+		private double dniInq;
+		private double telefonoInq;
 		private Sexo sexoInq;
 		private string emailInq;
 		private string domicilioInq;
@@ -24,7 +24,7 @@ namespace FormAdAlquileres
 		private List<Inquilino> inquilinos;
 		private Inmueble inmueble;
 
-		public frmAgregarGarantia(string nombre, string apellido, int dni, int tel, Sexo sexo, string email, string domicilio, int edad, List<Inquilino> inquilinos, Inmueble inmuebles)
+		public frmAgregarGarantia(string nombre, string apellido, double dni, double tel, Sexo sexo, string email, string domicilio, int edad, List<Inquilino> inquilinos, Inmueble inmuebles)
 		{
 			InitializeComponent();
 			this.nombreInq = nombre;
@@ -49,7 +49,7 @@ namespace FormAdAlquileres
 			Sexo sexo;
 			Enum.TryParse<Sexo>(cbSexo.SelectedValue.ToString(), out sexo);
 
-			Garantia garantia = new Garantia(txtNombre.Text, txtApellido.Text, Int32.Parse(txtDni.Text), Int32.Parse(txtTelefono.Text), sexo, txtDomicilio.Text, txtEmail.Text, Int32.Parse(nudEdad.Value.ToString()), txtRelacion.Text);
+			Garantia garantia = new Garantia(txtNombre.Text, txtApellido.Text, Double.Parse(txtDni.Text), Double.Parse(txtTelefono.Text), sexo, txtDomicilio.Text, txtEmail.Text, Int32.Parse(nudEdad.Value.ToString()), txtRelacion.Text);
 
 			frmAgregarContrato contrato = new frmAgregarContrato(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, emailInq, domicilioInq, edadInq, garantia, inquilinos, inmueble);
 			contrato.Show();

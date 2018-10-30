@@ -27,23 +27,21 @@ namespace FormAdAlquileres
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			//Inmueble newInm = new Inmueble("ssss");
-			ListViewItem item = new ListViewItem("asdasd");
-			item.SubItems.Add("asdasd");
-			item.SubItems.Add("ssddssdsdds");
-			listView1.Items.Add(item);
-			ListViewItem item2 = new ListViewItem("asdasd");
-			item2.SubItems.Add("asdasd");
-			item2.SubItems.Add("ssddssdsdds");
-			listView1.Items.Add(item2);
-			ListViewItem item3 = new ListViewItem("asdasd");
-			item3.SubItems.Add("asdasd");
-			item3.SubItems.Add("ssddssdsdds");
-			listView1.Items.Add(item3);
-			ListViewItem item4 = new ListViewItem("asdasd");
-			item4.SubItems.Add("asdasd");
-			item4.SubItems.Add("ssddssdsdds");
-			listView1.Items.Add(item4);
+			Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a1 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+
+			Departamento a2 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+
+			Departamento a3 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+
+			inmuebles.Add(a);
+			inmuebles.Add(a1);
+
+			inmuebles.Add(a2);
+
+			inmuebles.Add(a3);
+			timer2_Tick( sender,  e);
+			//lvPropiedades.FocusedItem.Name;
 
 		}
 
@@ -65,10 +63,54 @@ namespace FormAdAlquileres
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
-			toolStripStatusLabel1.Text = "Fecha: " + DateTime.Now.ToString();
+			lblFecha.Text = "Fecha: " + DateTime.Now.ToString();
+			label1.Text = inmuebles.Count.ToString();
+			label2.Text = inquilinos.Count.ToString();
 		}
 
 		private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void timer2_Tick(object sender, EventArgs e)
+		{
+			lvInquilino.Items.Clear();
+			lvPropiedades.Items.Clear();
+			foreach (Inmueble a in inmuebles)
+			{
+				ListViewItem item = new ListViewItem(a.Direccion);
+				item.SubItems.Add(a.Estado.ToString());
+				item.SubItems.Add("Proximamente");
+				lvPropiedades.Items.Add(item);
+			}
+
+			foreach(Inquilino b in inquilinos)
+			{
+				ListViewItem item = new ListViewItem(b.Nombre);
+				item.SubItems.Add(b.Apellido);
+				item.SubItems.Add(b.Telefono.ToString());
+				item.SubItems.Add(b.Contrato.Inmueble.Direccion);
+				lvInquilino.Items.Add(item);
+			}
+		}
+
+		private void listView2_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
 		}

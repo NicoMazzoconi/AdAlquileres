@@ -15,8 +15,8 @@ namespace FormAdAlquileres
 	{
 		private string nombreInq;
 		private string apellidoInq;
-		private int dniInq;
-		private int telefonoInq;
+		private double dniInq;
+		private double telefonoInq;
 		private Sexo sexoInq;
 		private string emailInq;
 		private string domicilioInq;
@@ -25,7 +25,7 @@ namespace FormAdAlquileres
 		private Inmueble inmueble;
 		private Garantia garantia;
 
-		public frmAgregarContrato(string nombre, string apellido, int dni, int telefono, Sexo sexo, string email, string domicilio, int edad, Garantia garantia, List<Inquilino> inquilinos, Inmueble inmueble)
+		public frmAgregarContrato(string nombre, string apellido, double dni, double telefono, Sexo sexo, string email, string domicilio, int edad, Garantia garantia, List<Inquilino> inquilinos, Inmueble inmueble)
 		{
 			InitializeComponent();
 			this.nombreInq = nombre;
@@ -51,6 +51,7 @@ namespace FormAdAlquileres
 			Contrato contrato = new Contrato(dtpInicio.Value, dtpFin.Value, float.Parse(txtPrecio.Text), Int32.Parse(txtAumento.Text), inmueble, rtbNota.Text);
 			Inquilino newInq = new Inquilino(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, domicilioInq, emailInq, edadInq, garantia, contrato);
 			inquilinos.Add(newInq);
+			inmueble.Estado = EEstado.alquilado;
 			this.Close();
 		}
 

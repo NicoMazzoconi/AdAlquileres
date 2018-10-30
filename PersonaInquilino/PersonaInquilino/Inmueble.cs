@@ -18,14 +18,13 @@ namespace PersonaInquilino
     {
         protected string direccion;
         protected string localidad;
-        protected Inquilino eInquilino;
         protected DateTime antiguedad;
         protected EEstado estado;
-        protected float precio;
+        //protected float precio;
         //private int id;
         protected short ambientes;
         protected float tamanio;
-        protected float deposito;
+       // protected float deposito;
         protected bool garaje;
         protected bool pileta;
         protected bool patio;
@@ -33,18 +32,17 @@ namespace PersonaInquilino
         protected bool parrilla;
         protected string notas;
 
-        public Inmueble(string direccion,string localidad, Inquilino inquilino, DateTime antiguedad, EEstado estado, float precio/*,int id*/,short ambientes,float tamanio, float deposito, bool garaje, bool pileta, bool patio,short baños,bool parrilla,string notas )
+        public Inmueble(string direccion,string localidad, DateTime antiguedad, EEstado estado/*, float precio/*,int id*/,short ambientes,float tamanio, /*float deposito,*/ bool garaje, bool pileta, bool patio,short baños,bool parrilla,string notas )
         {
             this.direccion = direccion;
             this.localidad = localidad;
-            this.eInquilino = inquilino;
             this.antiguedad = antiguedad;
             this.estado = estado;
-            this.precio = precio;
+            //this.precio = precio;
             //this.id = id;
             this.ambientes = ambientes;
             this.tamanio = tamanio;
-            this.deposito = deposito;
+           // this.deposito = deposito;
             this.garaje = garaje;
             this.pileta = pileta;
             this.patio = patio;
@@ -95,11 +93,11 @@ namespace PersonaInquilino
             set;
         }
 
-        public abstract Inquilino EInquilino
+      /*  public abstract Inquilino EInquilino
         {
             get;
             set;
-        }
+        }*/
 
         public abstract DateTime Antiguedad
         {
@@ -113,11 +111,11 @@ namespace PersonaInquilino
             set;
         }
 
-        public abstract float Precio
+       /* public abstract float Precio
         {
             get;
             set;
-        }
+        }*/
 
       
 
@@ -133,11 +131,11 @@ namespace PersonaInquilino
             set;
         }
 
-        public abstract float Deposito
+      /*  public abstract float Deposito
         {
             get;
             set;
-        }
+        }*/
 
         public abstract bool Garaje
         {

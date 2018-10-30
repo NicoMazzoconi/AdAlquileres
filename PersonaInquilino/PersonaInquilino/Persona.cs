@@ -16,8 +16,8 @@ namespace PersonaInquilino
 		#region Atributos
 		protected string nombre;
 		protected string apellido;
-		protected int dni;
-		protected int telefono;
+		protected double dni;
+		protected double telefono;
 		protected Sexo sexo;
 		protected string email;
 		protected string domicilio;
@@ -25,7 +25,7 @@ namespace PersonaInquilino
 		#endregion
 
 		#region Constructores
-		protected Persona(string nombre, string apellido, int dni, int telefono, Sexo sexo, string email, string domicilio, int edad)
+		protected Persona(string nombre, string apellido, double dni, double telefono, Sexo sexo, string email, string domicilio, int edad)
 		{
 			this.nombre = nombre;
 			this.apellido = apellido;
@@ -49,13 +49,13 @@ namespace PersonaInquilino
 			set;
 		}
 
-		public abstract int Dni
+		public abstract double Dni
 		{
 			get;
 			set;
 		}
 
-		public abstract int Telefono
+		public abstract double Telefono
 		{
 			get;
 			set;
