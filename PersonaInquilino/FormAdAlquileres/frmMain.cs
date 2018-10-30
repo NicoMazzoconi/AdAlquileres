@@ -27,8 +27,25 @@ namespace FormAdAlquileres
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-            //Inmueble newInm = new Inmueble("ssss");
-        }
+			//Inmueble newInm = new Inmueble("ssss");
+			ListViewItem item = new ListViewItem("asdasd");
+			item.SubItems.Add("asdasd");
+			item.SubItems.Add("ssddssdsdds");
+			listView1.Items.Add(item);
+			ListViewItem item2 = new ListViewItem("asdasd");
+			item2.SubItems.Add("asdasd");
+			item2.SubItems.Add("ssddssdsdds");
+			listView1.Items.Add(item2);
+			ListViewItem item3 = new ListViewItem("asdasd");
+			item3.SubItems.Add("asdasd");
+			item3.SubItems.Add("ssddssdsdds");
+			listView1.Items.Add(item3);
+			ListViewItem item4 = new ListViewItem("asdasd");
+			item4.SubItems.Add("asdasd");
+			item4.SubItems.Add("ssddssdsdds");
+			listView1.Items.Add(item4);
+
+		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -48,7 +65,12 @@ namespace FormAdAlquileres
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
-			lbl_fecha.Text = "Fecha: " + DateTime.Now.ToString();
+			toolStripStatusLabel1.Text = "Fecha: " + DateTime.Now.ToString();
+		}
+
+		private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
