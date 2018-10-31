@@ -8,9 +8,9 @@ namespace PersonaInquilino
 {
     public enum EEstado
     {
-        libre,
-        alquilado,
-        en_venta
+        Libre,
+        Alquilado,
+        En_Venta
 
     }
 

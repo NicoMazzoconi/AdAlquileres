@@ -36,36 +36,36 @@
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lbl_fecha = new System.Windows.Forms.Label();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.lvPropiedades = new System.Windows.Forms.ListView();
-			this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.Inquilino = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.timerFecha = new System.Windows.Forms.Timer(this.components);
 			this.statusFecha = new System.Windows.Forms.StatusStrip();
 			this.lblFecha = new System.Windows.Forms.ToolStripStatusLabel();
 			this.timerPanel = new System.Windows.Forms.Timer(this.components);
+			this.tpInquilino = new System.Windows.Forms.TabPage();
 			this.lvInquilino = new System.Windows.Forms.ListView();
 			this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Apellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Telefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Inmueble = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.tbInmueble = new System.Windows.Forms.TabPage();
+			this.lvPropiedades = new System.Windows.Forms.ListView();
+			this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.Inquilino = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
-			this.tabControl1.SuspendLayout();
-			this.tabPage1.SuspendLayout();
-			this.tabPage2.SuspendLayout();
 			this.statusFecha.SuspendLayout();
+			this.tpInquilino.SuspendLayout();
+			this.tbInmueble.SuspendLayout();
+			this.tabControl1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(12, 161);
+			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+			this.button1.Location = new System.Drawing.Point(78, 95);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(132, 23);
+			this.button1.Size = new System.Drawing.Size(187, 42);
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Agregar Inquilino";
 			this.button1.UseVisualStyleBackColor = true;
@@ -73,9 +73,10 @@
 			// 
 			// btn_Propiedad
 			// 
-			this.btn_Propiedad.Location = new System.Drawing.Point(12, 124);
+			this.btn_Propiedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+			this.btn_Propiedad.Location = new System.Drawing.Point(78, 95);
 			this.btn_Propiedad.Name = "btn_Propiedad";
-			this.btn_Propiedad.Size = new System.Drawing.Size(132, 23);
+			this.btn_Propiedad.Size = new System.Drawing.Size(187, 42);
 			this.btn_Propiedad.TabIndex = 1;
 			this.btn_Propiedad.Text = "Agregar Propiedad";
 			this.btn_Propiedad.UseVisualStyleBackColor = true;
@@ -84,9 +85,10 @@
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Location = new System.Drawing.Point(172, 12);
+			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+			this.groupBox1.Location = new System.Drawing.Point(69, 6);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(156, 43);
+			this.groupBox1.Size = new System.Drawing.Size(209, 64);
 			this.groupBox1.TabIndex = 2;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Propiedades Totales";
@@ -95,7 +97,8 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(47, 20);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.label1.Location = new System.Drawing.Point(72, 33);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(55, 13);
 			this.label1.TabIndex = 0;
@@ -105,9 +108,10 @@
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.label2);
-			this.groupBox2.Location = new System.Drawing.Point(362, 12);
+			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+			this.groupBox2.Location = new System.Drawing.Point(69, 6);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(156, 43);
+			this.groupBox2.Size = new System.Drawing.Size(209, 64);
 			this.groupBox2.TabIndex = 3;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Propiedades Alquiladas";
@@ -115,7 +119,8 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(44, 20);
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.label2.Location = new System.Drawing.Point(72, 33);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(55, 13);
 			this.label2.TabIndex = 0;
@@ -131,83 +136,6 @@
 			this.lbl_fecha.Text = "Fecha";
 			this.lbl_fecha.Click += new System.EventHandler(this.lbl_fecha_Click);
 			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Controls.Add(this.tabPage3);
-			this.tabControl1.Location = new System.Drawing.Point(168, 61);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(702, 362);
-			this.tabControl1.TabIndex = 5;
-			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.lvPropiedades);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(694, 336);
-			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "Propiedades";
-			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// lvPropiedades
-			// 
-			this.lvPropiedades.BackColor = System.Drawing.SystemColors.Window;
-			this.lvPropiedades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.lvPropiedades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Direccion,
-            this.Estado,
-            this.Inquilino});
-			this.lvPropiedades.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lvPropiedades.FullRowSelect = true;
-			this.lvPropiedades.GridLines = true;
-			this.lvPropiedades.Location = new System.Drawing.Point(3, 3);
-			this.lvPropiedades.MultiSelect = false;
-			this.lvPropiedades.Name = "lvPropiedades";
-			this.lvPropiedades.Size = new System.Drawing.Size(688, 330);
-			this.lvPropiedades.TabIndex = 0;
-			this.lvPropiedades.UseCompatibleStateImageBehavior = false;
-			this.lvPropiedades.View = System.Windows.Forms.View.Details;
-			// 
-			// Direccion
-			// 
-			this.Direccion.Text = "Direccion";
-			this.Direccion.Width = 258;
-			// 
-			// Estado
-			// 
-			this.Estado.Text = "Estado";
-			this.Estado.Width = 135;
-			// 
-			// Inquilino
-			// 
-			this.Inquilino.Text = "Inquilino";
-			this.Inquilino.Width = 290;
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Controls.Add(this.lvInquilino);
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(694, 336);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Inquilinos";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// tabPage3
-			// 
-			this.tabPage3.Location = new System.Drawing.Point(4, 22);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(694, 336);
-			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Text = "Contratos";
-			this.tabPage3.UseVisualStyleBackColor = true;
-			// 
 			// timerFecha
 			// 
 			this.timerFecha.Enabled = true;
@@ -218,10 +146,10 @@
 			// 
 			this.statusFecha.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblFecha});
-			this.statusFecha.Location = new System.Drawing.Point(0, 442);
+			this.statusFecha.Location = new System.Drawing.Point(0, 463);
 			this.statusFecha.Name = "statusFecha";
 			this.statusFecha.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-			this.statusFecha.Size = new System.Drawing.Size(882, 22);
+			this.statusFecha.Size = new System.Drawing.Size(1043, 22);
 			this.statusFecha.TabIndex = 6;
 			this.statusFecha.Text = "statusStrip1";
 			// 
@@ -240,20 +168,33 @@
 			this.timerPanel.Interval = 60000;
 			this.timerPanel.Tick += new System.EventHandler(this.timer2_Tick);
 			// 
+			// tpInquilino
+			// 
+			this.tpInquilino.Controls.Add(this.lvInquilino);
+			this.tpInquilino.Controls.Add(this.button1);
+			this.tpInquilino.Controls.Add(this.groupBox2);
+			this.tpInquilino.Location = new System.Drawing.Point(4, 38);
+			this.tpInquilino.Name = "tpInquilino";
+			this.tpInquilino.Padding = new System.Windows.Forms.Padding(3);
+			this.tpInquilino.Size = new System.Drawing.Size(1035, 443);
+			this.tpInquilino.TabIndex = 1;
+			this.tpInquilino.Text = "Inquilinos";
+			this.tpInquilino.UseVisualStyleBackColor = true;
+			// 
 			// lvInquilino
 			// 
+			this.lvInquilino.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.lvInquilino.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nombre,
             this.Apellido,
             this.Telefono,
             this.Inmueble});
-			this.lvInquilino.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lvInquilino.FullRowSelect = true;
 			this.lvInquilino.GridLines = true;
-			this.lvInquilino.Location = new System.Drawing.Point(3, 3);
+			this.lvInquilino.Location = new System.Drawing.Point(344, 3);
 			this.lvInquilino.MultiSelect = false;
 			this.lvInquilino.Name = "lvInquilino";
-			this.lvInquilino.Size = new System.Drawing.Size(688, 330);
+			this.lvInquilino.Size = new System.Drawing.Size(688, 439);
 			this.lvInquilino.TabIndex = 0;
 			this.lvInquilino.UseCompatibleStateImageBehavior = false;
 			this.lvInquilino.View = System.Windows.Forms.View.Details;
@@ -279,18 +220,74 @@
 			this.Inmueble.Text = "Inmueble";
 			this.Inmueble.Width = 275;
 			// 
+			// tbInmueble
+			// 
+			this.tbInmueble.Controls.Add(this.lvPropiedades);
+			this.tbInmueble.Controls.Add(this.btn_Propiedad);
+			this.tbInmueble.Controls.Add(this.groupBox1);
+			this.tbInmueble.Location = new System.Drawing.Point(4, 38);
+			this.tbInmueble.Name = "tbInmueble";
+			this.tbInmueble.Padding = new System.Windows.Forms.Padding(3);
+			this.tbInmueble.Size = new System.Drawing.Size(1035, 443);
+			this.tbInmueble.TabIndex = 0;
+			this.tbInmueble.Text = "Propiedades";
+			this.tbInmueble.UseVisualStyleBackColor = true;
+			// 
+			// lvPropiedades
+			// 
+			this.lvPropiedades.BackColor = System.Drawing.SystemColors.Window;
+			this.lvPropiedades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lvPropiedades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Direccion,
+            this.Estado,
+            this.Inquilino});
+			this.lvPropiedades.Dock = System.Windows.Forms.DockStyle.Right;
+			this.lvPropiedades.FullRowSelect = true;
+			this.lvPropiedades.GridLines = true;
+			this.lvPropiedades.Location = new System.Drawing.Point(344, 3);
+			this.lvPropiedades.MultiSelect = false;
+			this.lvPropiedades.Name = "lvPropiedades";
+			this.lvPropiedades.Size = new System.Drawing.Size(688, 437);
+			this.lvPropiedades.TabIndex = 0;
+			this.lvPropiedades.UseCompatibleStateImageBehavior = false;
+			this.lvPropiedades.View = System.Windows.Forms.View.Details;
+			// 
+			// Direccion
+			// 
+			this.Direccion.Text = "Direccion";
+			this.Direccion.Width = 258;
+			// 
+			// Estado
+			// 
+			this.Estado.Text = "Estado";
+			this.Estado.Width = 135;
+			// 
+			// Inquilino
+			// 
+			this.Inquilino.Text = "Inquilino";
+			this.Inquilino.Width = 290;
+			// 
+			// tabControl1
+			// 
+			this.tabControl1.Controls.Add(this.tbInmueble);
+			this.tabControl1.Controls.Add(this.tpInquilino);
+			this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+			this.tabControl1.Location = new System.Drawing.Point(0, 0);
+			this.tabControl1.Name = "tabControl1";
+			this.tabControl1.SelectedIndex = 0;
+			this.tabControl1.Size = new System.Drawing.Size(1043, 485);
+			this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+			this.tabControl1.TabIndex = 5;
+			// 
 			// frmMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(882, 464);
+			this.ClientSize = new System.Drawing.Size(1043, 485);
 			this.Controls.Add(this.statusFecha);
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.lbl_fecha);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.btn_Propiedad);
-			this.Controls.Add(this.button1);
 			this.Name = "frmMain";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.Text = "AdAlquileres";
@@ -299,11 +296,11 @@
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
 			this.groupBox2.PerformLayout();
-			this.tabControl1.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage2.ResumeLayout(false);
 			this.statusFecha.ResumeLayout(false);
 			this.statusFecha.PerformLayout();
+			this.tpInquilino.ResumeLayout(false);
+			this.tbInmueble.ResumeLayout(false);
+			this.tabControl1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -318,23 +315,22 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_fecha;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.Timer timerFecha;
 		private System.Windows.Forms.StatusStrip statusFecha;
 		private System.Windows.Forms.ToolStripStatusLabel lblFecha;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.ListView lvPropiedades;
-		private System.Windows.Forms.ColumnHeader Direccion;
-		private System.Windows.Forms.ColumnHeader Estado;
-		private System.Windows.Forms.ColumnHeader Inquilino;
 		private System.Windows.Forms.Timer timerPanel;
+		private System.Windows.Forms.TabPage tpInquilino;
 		private System.Windows.Forms.ListView lvInquilino;
 		private System.Windows.Forms.ColumnHeader Nombre;
 		private System.Windows.Forms.ColumnHeader Apellido;
 		private System.Windows.Forms.ColumnHeader Telefono;
 		private System.Windows.Forms.ColumnHeader Inmueble;
+		private System.Windows.Forms.TabPage tbInmueble;
+		private System.Windows.Forms.ListView lvPropiedades;
+		private System.Windows.Forms.ColumnHeader Direccion;
+		private System.Windows.Forms.ColumnHeader Estado;
+		private System.Windows.Forms.ColumnHeader Inquilino;
+		private System.Windows.Forms.TabControl tabControl1;
 	}
 }
 

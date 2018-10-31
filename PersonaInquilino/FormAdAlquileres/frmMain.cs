@@ -27,22 +27,15 @@ namespace FormAdAlquileres
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-			Departamento a1 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-
-			Departamento a2 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-
-			Departamento a3 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-
+			Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a1 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a2 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a3 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
 			inmuebles.Add(a);
 			inmuebles.Add(a1);
-
 			inmuebles.Add(a2);
-
 			inmuebles.Add(a3);
 			timer2_Tick( sender,  e);
-			//lvPropiedades.FocusedItem.Name;
-
 		}
 
 		private void button1_Click(object sender, EventArgs e)
