@@ -33,35 +33,37 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_localidad = new System.Windows.Forms.TextBox();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.groupBoxGaraje = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rb_garajeSi = new System.Windows.Forms.RadioButton();
             this.rb_garajeNo = new System.Windows.Forms.RadioButton();
+            this.rb_garajeSi = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBoxPileta = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rb_piletaSi = new System.Windows.Forms.RadioButton();
             this.rb_piletaNo = new System.Windows.Forms.RadioButton();
+            this.rb_piletaSi = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBoxPatio = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.rb_patioSi = new System.Windows.Forms.RadioButton();
             this.rb_patioNo = new System.Windows.Forms.RadioButton();
+            this.rb_patioSi = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBoxOtros = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBoxParrilla = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.rb_parrillaSi = new System.Windows.Forms.RadioButton();
-            this.rb_parrillaNo = new System.Windows.Forms.RadioButton();
-            this.label12 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBoxParrilla = new System.Windows.Forms.GroupBox();
+            this.rb_parrillaNo = new System.Windows.Forms.RadioButton();
+            this.rb_parrillaSi = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_listo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -111,8 +113,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_localidad);
+            this.groupBox1.Controls.Add(this.txt_direccion);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(32, 29);
@@ -121,26 +123,26 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // txt_localidad
+            // 
+            this.txt_localidad.Location = new System.Drawing.Point(103, 54);
+            this.txt_localidad.Name = "txt_localidad";
+            this.txt_localidad.Size = new System.Drawing.Size(194, 20);
+            this.txt_localidad.TabIndex = 3;
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.Location = new System.Drawing.Point(103, 18);
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(194, 20);
+            this.txt_direccion.TabIndex = 2;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(135, 139);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(103, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(103, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 20);
-            this.textBox2.TabIndex = 3;
             // 
             // numericUpDown1
             // 
@@ -193,14 +195,16 @@
             this.groupBoxGaraje.TabStop = false;
             this.groupBoxGaraje.Text = "GARAJE";
             // 
-            // label7
+            // rb_garajeNo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Garaje: ";
+            this.rb_garajeNo.AutoSize = true;
+            this.rb_garajeNo.Location = new System.Drawing.Point(212, 17);
+            this.rb_garajeNo.Name = "rb_garajeNo";
+            this.rb_garajeNo.Size = new System.Drawing.Size(39, 17);
+            this.rb_garajeNo.TabIndex = 3;
+            this.rb_garajeNo.TabStop = true;
+            this.rb_garajeNo.Text = "No";
+            this.rb_garajeNo.UseVisualStyleBackColor = true;
             // 
             // rb_garajeSi
             // 
@@ -213,16 +217,14 @@
             this.rb_garajeSi.Text = "Si";
             this.rb_garajeSi.UseVisualStyleBackColor = true;
             // 
-            // rb_garajeNo
+            // label7
             // 
-            this.rb_garajeNo.AutoSize = true;
-            this.rb_garajeNo.Location = new System.Drawing.Point(212, 17);
-            this.rb_garajeNo.Name = "rb_garajeNo";
-            this.rb_garajeNo.Size = new System.Drawing.Size(39, 17);
-            this.rb_garajeNo.TabIndex = 3;
-            this.rb_garajeNo.TabStop = true;
-            this.rb_garajeNo.Text = "No";
-            this.rb_garajeNo.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Garaje: ";
             // 
             // groupBoxPileta
             // 
@@ -236,14 +238,16 @@
             this.groupBoxPileta.TabStop = false;
             this.groupBoxPileta.Text = "PILETA";
             // 
-            // label8
+            // rb_piletaNo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Piletea:";
+            this.rb_piletaNo.AutoSize = true;
+            this.rb_piletaNo.Location = new System.Drawing.Point(212, 17);
+            this.rb_piletaNo.Name = "rb_piletaNo";
+            this.rb_piletaNo.Size = new System.Drawing.Size(39, 17);
+            this.rb_piletaNo.TabIndex = 3;
+            this.rb_piletaNo.TabStop = true;
+            this.rb_piletaNo.Text = "No";
+            this.rb_piletaNo.UseVisualStyleBackColor = true;
             // 
             // rb_piletaSi
             // 
@@ -256,16 +260,14 @@
             this.rb_piletaSi.Text = "Si";
             this.rb_piletaSi.UseVisualStyleBackColor = true;
             // 
-            // rb_piletaNo
+            // label8
             // 
-            this.rb_piletaNo.AutoSize = true;
-            this.rb_piletaNo.Location = new System.Drawing.Point(212, 17);
-            this.rb_piletaNo.Name = "rb_piletaNo";
-            this.rb_piletaNo.Size = new System.Drawing.Size(39, 17);
-            this.rb_piletaNo.TabIndex = 3;
-            this.rb_piletaNo.TabStop = true;
-            this.rb_piletaNo.Text = "No";
-            this.rb_piletaNo.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Piletea:";
             // 
             // groupBoxPatio
             // 
@@ -279,14 +281,16 @@
             this.groupBoxPatio.TabStop = false;
             this.groupBoxPatio.Text = "PATIO";
             // 
-            // label9
+            // rb_patioNo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Patio:";
+            this.rb_patioNo.AutoSize = true;
+            this.rb_patioNo.Location = new System.Drawing.Point(212, 16);
+            this.rb_patioNo.Name = "rb_patioNo";
+            this.rb_patioNo.Size = new System.Drawing.Size(39, 17);
+            this.rb_patioNo.TabIndex = 16;
+            this.rb_patioNo.TabStop = true;
+            this.rb_patioNo.Text = "No";
+            this.rb_patioNo.UseVisualStyleBackColor = true;
             // 
             // rb_patioSi
             // 
@@ -299,16 +303,14 @@
             this.rb_patioSi.Text = "Si";
             this.rb_patioSi.UseVisualStyleBackColor = true;
             // 
-            // rb_patioNo
+            // label9
             // 
-            this.rb_patioNo.AutoSize = true;
-            this.rb_patioNo.Location = new System.Drawing.Point(212, 16);
-            this.rb_patioNo.Name = "rb_patioNo";
-            this.rb_patioNo.Size = new System.Drawing.Size(39, 17);
-            this.rb_patioNo.TabIndex = 16;
-            this.rb_patioNo.TabStop = true;
-            this.rb_patioNo.Text = "No";
-            this.rb_patioNo.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Patio:";
             // 
             // groupBoxOtros
             // 
@@ -322,9 +324,34 @@
             this.groupBoxOtros.Controls.Add(this.label6);
             this.groupBoxOtros.Location = new System.Drawing.Point(355, 29);
             this.groupBoxOtros.Name = "groupBoxOtros";
-            this.groupBoxOtros.Size = new System.Drawing.Size(433, 386);
+            this.groupBoxOtros.Size = new System.Drawing.Size(433, 342);
             this.groupBoxOtros.TabIndex = 14;
             this.groupBoxOtros.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(25, 195);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(382, 139);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(22, 179);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Notas:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(90, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(317, 21);
+            this.comboBox1.TabIndex = 2;
             // 
             // label10
             // 
@@ -334,14 +361,6 @@
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 1;
             this.label10.Text = "Estado:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(90, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(317, 21);
-            this.comboBox1.TabIndex = 2;
             // 
             // groupBoxParrilla
             // 
@@ -355,14 +374,16 @@
             this.groupBoxParrilla.TabStop = false;
             this.groupBoxParrilla.Text = "PARRILLA";
             // 
-            // label11
+            // rb_parrillaNo
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Parrilla: ";
+            this.rb_parrillaNo.AutoSize = true;
+            this.rb_parrillaNo.Location = new System.Drawing.Point(212, 16);
+            this.rb_parrillaNo.Name = "rb_parrillaNo";
+            this.rb_parrillaNo.Size = new System.Drawing.Size(39, 17);
+            this.rb_parrillaNo.TabIndex = 3;
+            this.rb_parrillaNo.TabStop = true;
+            this.rb_parrillaNo.Text = "No";
+            this.rb_parrillaNo.UseVisualStyleBackColor = true;
             // 
             // rb_parrillaSi
             // 
@@ -375,39 +396,41 @@
             this.rb_parrillaSi.Text = "Si";
             this.rb_parrillaSi.UseVisualStyleBackColor = true;
             // 
-            // rb_parrillaNo
+            // label11
             // 
-            this.rb_parrillaNo.AutoSize = true;
-            this.rb_parrillaNo.Location = new System.Drawing.Point(212, 16);
-            this.rb_parrillaNo.Name = "rb_parrillaNo";
-            this.rb_parrillaNo.Size = new System.Drawing.Size(39, 17);
-            this.rb_parrillaNo.TabIndex = 3;
-            this.rb_parrillaNo.TabStop = true;
-            this.rb_parrillaNo.Text = "No";
-            this.rb_parrillaNo.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(25, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Parrilla: ";
             // 
-            // label12
+            // btn_cancelar
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 163);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Notas:";
+            this.btn_cancelar.Location = new System.Drawing.Point(366, 377);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(159, 37);
+            this.btn_cancelar.TabIndex = 16;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // btn_listo
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(25, 195);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(382, 157);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.btn_listo.Location = new System.Drawing.Point(629, 377);
+            this.btn_listo.Name = "btn_listo";
+            this.btn_listo.Size = new System.Drawing.Size(159, 37);
+            this.btn_listo.TabIndex = 17;
+            this.btn_listo.Text = "Listo";
+            this.btn_listo.UseVisualStyleBackColor = true;
+            this.btn_listo.Click += new System.EventHandler(this.btn_listo_Click);
             // 
             // frmAgregarInmueble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 425);
+            this.Controls.Add(this.btn_listo);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.groupBoxParrilla);
             this.Controls.Add(this.groupBoxOtros);
             this.Controls.Add(this.groupBoxPatio);
@@ -449,8 +472,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_localidad;
+        private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -477,5 +500,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_listo;
     }
 }

@@ -47,12 +47,12 @@
             this.Telefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Inmueble = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbInmueble = new System.Windows.Forms.TabPage();
+            this.btn_agregarDepartamento = new System.Windows.Forms.Button();
             this.lvPropiedades = new System.Windows.Forms.ListView();
             this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Inquilino = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btn_agregarDepartamento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusFecha.SuspendLayout();
@@ -177,7 +177,7 @@
             this.tpInquilino.Location = new System.Drawing.Point(4, 38);
             this.tpInquilino.Name = "tpInquilino";
             this.tpInquilino.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInquilino.Size = new System.Drawing.Size(1035, 443);
+            this.tpInquilino.Size = new System.Drawing.Size(1035, 421);
             this.tpInquilino.TabIndex = 1;
             this.tpInquilino.Text = "Inquilinos";
             this.tpInquilino.UseVisualStyleBackColor = true;
@@ -235,6 +235,17 @@
             this.tbInmueble.Text = "Propiedades";
             this.tbInmueble.UseVisualStyleBackColor = true;
             // 
+            // btn_agregarDepartamento
+            // 
+            this.btn_agregarDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btn_agregarDepartamento.Location = new System.Drawing.Point(78, 169);
+            this.btn_agregarDepartamento.Name = "btn_agregarDepartamento";
+            this.btn_agregarDepartamento.Size = new System.Drawing.Size(187, 42);
+            this.btn_agregarDepartamento.TabIndex = 3;
+            this.btn_agregarDepartamento.Text = "Agregar Departamento";
+            this.btn_agregarDepartamento.UseVisualStyleBackColor = true;
+            this.btn_agregarDepartamento.Click += new System.EventHandler(this.btn_agregarDepartamento_Click);
+            // 
             // lvPropiedades
             // 
             this.lvPropiedades.BackColor = System.Drawing.SystemColors.Window;
@@ -281,17 +292,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1043, 463);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 5;
-            // 
-            // btn_agregarDepartamento
-            // 
-            this.btn_agregarDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btn_agregarDepartamento.Location = new System.Drawing.Point(78, 169);
-            this.btn_agregarDepartamento.Name = "btn_agregarDepartamento";
-            this.btn_agregarDepartamento.Size = new System.Drawing.Size(187, 42);
-            this.btn_agregarDepartamento.TabIndex = 3;
-            this.btn_agregarDepartamento.Text = "Agregar Departamento";
-            this.btn_agregarDepartamento.UseVisualStyleBackColor = true;
-            this.btn_agregarDepartamento.Click += new System.EventHandler(this.btn_agregarDepartamento_Click);
             // 
             // frmMain
             // 
