@@ -27,7 +27,7 @@ namespace FormAdAlquileres
 
 		private void frmMain_Load(object sender, EventArgs e)
 		{
-			Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+            Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
 			Departamento a1 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
 			Departamento a2 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
 			Departamento a3 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
@@ -107,5 +107,10 @@ namespace FormAdAlquileres
 		{
 
 		}
-	}
+
+        private void btn_agregarDepartamento_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
