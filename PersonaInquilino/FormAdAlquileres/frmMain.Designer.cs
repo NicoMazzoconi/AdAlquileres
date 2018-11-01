@@ -41,6 +41,7 @@
 			this.lblFecha = new System.Windows.Forms.ToolStripStatusLabel();
 			this.timerPanel = new System.Windows.Forms.Timer(this.components);
 			this.tpInquilino = new System.Windows.Forms.TabPage();
+			this.btRefresh = new System.Windows.Forms.Button();
 			this.btModCont = new System.Windows.Forms.Button();
 			this.btModGara = new System.Windows.Forms.Button();
 			this.btnModInq = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
 			this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Inquilino = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.button1 = new System.Windows.Forms.Button();
+			this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.statusFecha.SuspendLayout();
@@ -71,8 +72,7 @@
 			this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.btnAgregar.Location = new System.Drawing.Point(78, 95);
-			this.btnAgregar.MaximumSize = new System.Drawing.Size(187, 42);
+			this.btnAgregar.Location = new System.Drawing.Point(95, 95);
 			this.btnAgregar.Name = "btnAgregar";
 			this.btnAgregar.Size = new System.Drawing.Size(187, 42);
 			this.btnAgregar.TabIndex = 0;
@@ -120,8 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.groupBox2.Controls.Add(this.label2);
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.groupBox2.Location = new System.Drawing.Point(69, 6);
-			this.groupBox2.MaximumSize = new System.Drawing.Size(209, 64);
+			this.groupBox2.Location = new System.Drawing.Point(86, 6);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(209, 64);
 			this.groupBox2.TabIndex = 3;
@@ -133,7 +132,6 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
 			this.label2.Location = new System.Drawing.Point(72, 33);
-			this.label2.MaximumSize = new System.Drawing.Size(55, 13);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(55, 13);
 			this.label2.TabIndex = 0;
@@ -177,13 +175,12 @@
 			// 
 			// timerPanel
 			// 
-			this.timerPanel.Enabled = true;
 			this.timerPanel.Interval = 60000;
 			this.timerPanel.Tick += new System.EventHandler(this.timer2_Tick);
 			// 
 			// tpInquilino
 			// 
-			this.tpInquilino.Controls.Add(this.button1);
+			this.tpInquilino.Controls.Add(this.btRefresh);
 			this.tpInquilino.Controls.Add(this.btModCont);
 			this.tpInquilino.Controls.Add(this.btModGara);
 			this.tpInquilino.Controls.Add(this.btnModInq);
@@ -200,13 +197,25 @@
 			this.tpInquilino.Click += new System.EventHandler(this.tpInquilino_Click);
 			this.tpInquilino.Resize += new System.EventHandler(this.tpInquilino_Resize);
 			// 
+			// btRefresh
+			// 
+			this.btRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+			this.btRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+			this.btRefresh.Location = new System.Drawing.Point(95, 371);
+			this.btRefresh.Name = "btRefresh";
+			this.btRefresh.Size = new System.Drawing.Size(187, 42);
+			this.btRefresh.TabIndex = 7;
+			this.btRefresh.Text = "Actualizar";
+			this.btRefresh.UseVisualStyleBackColor = true;
+			this.btRefresh.Click += new System.EventHandler(this.button1_Click_1);
+			// 
 			// btModCont
 			// 
 			this.btModCont.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.btModCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.btModCont.Location = new System.Drawing.Point(78, 239);
-			this.btModCont.MaximumSize = new System.Drawing.Size(187, 42);
+			this.btModCont.Location = new System.Drawing.Point(95, 302);
 			this.btModCont.Name = "btModCont";
 			this.btModCont.Size = new System.Drawing.Size(187, 42);
 			this.btModCont.TabIndex = 6;
@@ -218,8 +227,7 @@
 			this.btModGara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.btModGara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.btModGara.Location = new System.Drawing.Point(78, 191);
-			this.btModGara.MaximumSize = new System.Drawing.Size(187, 42);
+			this.btModGara.Location = new System.Drawing.Point(95, 233);
 			this.btModGara.Name = "btModGara";
 			this.btModGara.Size = new System.Drawing.Size(187, 42);
 			this.btModGara.TabIndex = 5;
@@ -231,8 +239,7 @@
 			this.btnModInq.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnModInq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.btnModInq.Location = new System.Drawing.Point(78, 143);
-			this.btnModInq.MaximumSize = new System.Drawing.Size(187, 42);
+			this.btnModInq.Location = new System.Drawing.Point(95, 164);
 			this.btnModInq.Name = "btnModInq";
 			this.btnModInq.Size = new System.Drawing.Size(187, 42);
 			this.btnModInq.TabIndex = 4;
@@ -315,6 +322,7 @@
 			this.lvPropiedades.BackColor = System.Drawing.SystemColors.Window;
 			this.lvPropiedades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lvPropiedades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
             this.Direccion,
             this.Estado,
             this.Inquilino});
@@ -332,12 +340,12 @@
 			// Direccion
 			// 
 			this.Direccion.Text = "Direccion";
-			this.Direccion.Width = 258;
+			this.Direccion.Width = 242;
 			// 
 			// Estado
 			// 
 			this.Estado.Text = "Estado";
-			this.Estado.Width = 135;
+			this.Estado.Width = 106;
 			// 
 			// Inquilino
 			// 
@@ -357,19 +365,11 @@
 			this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
 			this.tabControl1.TabIndex = 5;
 			// 
-			// button1
+			// ID
 			// 
-			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-			this.button1.Location = new System.Drawing.Point(78, 287);
-			this.button1.MaximumSize = new System.Drawing.Size(187, 42);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(187, 42);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Actualizar";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click_1);
+			this.ID.Text = "ID";
+			this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.ID.Width = 46;
 			// 
 			// frmMain
 			// 
@@ -384,6 +384,7 @@
 			this.Text = "AdAlquileres";
 			this.MaximumSizeChanged += new System.EventHandler(this.frmMain_MaximumSizeChanged);
 			this.Load += new System.EventHandler(this.frmMain_Load);
+			this.Resize += new System.EventHandler(this.frmMain_Resize);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -428,7 +429,8 @@
 		private System.Windows.Forms.Button btModGara;
 		private System.Windows.Forms.Button btnModInq;
 		private System.Windows.Forms.ColumnHeader colmnId;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btRefresh;
+		private System.Windows.Forms.ColumnHeader ID;
 	}
 }
 

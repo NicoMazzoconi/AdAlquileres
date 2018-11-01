@@ -17,9 +17,9 @@ namespace PersonaInquilino
             EEstado estado, /*float precio,*/ short ambientes, float tamanio, /*float deposito,*/
             bool garaje, bool pileta, bool patio, short baños, bool parrilla, string notas,short piso,char letra,bool balcon):base(direccion,localidad,antiguedad,estado/*,precio*/,ambientes,tamanio,/*deposito,*/garaje,pileta,patio,baños,parrilla,notas)
         {
-            this.Piso = piso;
-            this.Letra = letra;
-            this.Balcon = balcon;
+            this.piso = piso;
+            this.letra = letra;
+            this.balcon = balcon;
         }
 
         public override string Direccion
@@ -269,7 +269,10 @@ namespace PersonaInquilino
             }
         }
 
-        
+		public override string Mostrar()
+		{
+			return Piso + "º " + Letra; 
+		}
 
         public static bool operator ==(Departamento d1, Departamento d2)
         {

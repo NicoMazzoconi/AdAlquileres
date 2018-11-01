@@ -97,9 +97,19 @@ namespace FormAdAlquileres
 			lvPropiedades.Items.Clear();
 			foreach (Inmueble a in inmuebles)
 			{
-				ListViewItem item = new ListViewItem(a.Direccion);
-				item.SubItems.Add(a.Estado.ToString());
-				item.SubItems.Add("Proximamente");
+				ListViewItem item = new ListViewItem(a.ID.ToString());
+				if (a is Departamento)
+				{
+					item.SubItems.Add(a.Direccion + ", " + a.Localidad + ", " + a.Mostrar());
+					item.SubItems.Add(a.Estado.ToString());
+					item.SubItems.Add("Proximamente");
+				}
+				else
+				{
+					item.SubItems.Add(a.Direccion + ", " + a.Localidad);
+					item.SubItems.Add(a.Estado.ToString());
+					item.SubItems.Add("Proximamente");
+				}
 				lvPropiedades.Items.Add(item);
 			}
 
@@ -153,6 +163,28 @@ namespace FormAdAlquileres
 		private void frmMain_MaximumSizeChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void frmMain_Resize(object sender, EventArgs e)
+		{
+			//PARTE INQUILINO RESIZE /
+			lvInquilino.Width = (int)(frmMain.ActiveForm.Width * 0.70);			//
+			btnAgregar.Width = (int)(frmMain.ActiveForm.Width * 0.15);			//
+			btnAgregar.Height = 42;												//			HECHO
+			btnModInq.Width = (int)(frmMain.ActiveForm.Width * 0.15);			//			  A
+			btnModInq.Height = 42;												//			 OJO
+			btModCont.Width = (int)(frmMain.ActiveForm.Width * 0.15);			//
+			btModCont.Height = 42;												//
+			btModGara.Width = (int)(frmMain.ActiveForm.Width * 0.15);			//
+			btModGara.Height = 42;												//
+			btRefresh.Width = (int)(frmMain.ActiveForm.Width * 0.15);			//
+			btRefresh.Height = 42;												//
+			groupBox2.Height = 64;												//
+			groupBox2.Width = (int)(frmMain.ActiveForm.Width * 0.17);			//
+			label2.Width = (int)(frmMain.ActiveForm.Width * 0.17);				//
+			label2.Height = 13;													//
+			label2.Left = (int)((groupBox2.Right - groupBox2.Left) / 2.25);		//
+			//FIN RESIZE INQUILINO
 		}
 	}
 }

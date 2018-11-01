@@ -21,7 +21,8 @@ namespace PersonaInquilino
         protected DateTime antiguedad;
         protected EEstado estado;
         //protected float precio;
-        //private int id;
+        private int id;
+		private static int idStatic;
         protected short ambientes;
         protected float tamanio;
        // protected float deposito;
@@ -32,6 +33,10 @@ namespace PersonaInquilino
         protected bool parrilla;
         protected string notas;
 
+		static Inmueble()
+		{
+			idStatic = 0;
+		}
         public Inmueble(string direccion,string localidad, DateTime antiguedad, EEstado estado/*, float precio/*,int id*/,short ambientes,float tamanio, /*float deposito,*/ bool garaje, bool pileta, bool patio,short baños,bool parrilla,string notas )
         {
             this.direccion = direccion;
@@ -49,8 +54,17 @@ namespace PersonaInquilino
             this.baños = baños;
             this.parrilla = parrilla;
             this.notas = notas;
-
+			id = idStatic;
+			idStatic++;
         }
+
+		public int ID
+		{
+			get
+			{
+				return id;
+			}
+		}
 
         public abstract string Notas
         {
@@ -142,5 +156,7 @@ namespace PersonaInquilino
             get;
             set;
         }
+
+		public abstract string Mostrar();
     }
 }

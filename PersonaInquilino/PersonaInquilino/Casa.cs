@@ -225,7 +225,12 @@ namespace PersonaInquilino
             }
         }
 
-        public static bool operator ==(Casa c1, Casa c2)
+		public override string Mostrar()
+		{
+			throw new NotImplementedException();
+		}
+
+		public static bool operator ==(Casa c1, Casa c2)
         {
             if(c1.Tamanio == c2.Tamanio && c1.Direccion == c2.Direccion && c1.Antiguedad == c2.Antiguedad)
             {
