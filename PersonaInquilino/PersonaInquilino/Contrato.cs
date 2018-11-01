@@ -23,6 +23,7 @@ namespace PersonaInquilino
 			this.mesesParaAumento = mesesParaAumento;
 			this.inmueble = inmueble;
 			this.notaContrato = notaContrato;
+			this.inmueble.Estado = EEstado.Alquilado;
 		}
 
 		public DateTime FechaInicio

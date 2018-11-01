@@ -224,6 +224,7 @@
 			this.cbInmueble.Name = "cbInmueble";
 			this.cbInmueble.Size = new System.Drawing.Size(443, 37);
 			this.cbInmueble.TabIndex = 18;
+			this.cbInmueble.SelectedIndexChanged += new System.EventHandler(this.cbInmueble_SelectedIndexChanged);
 			// 
 			// btNext
 			// 

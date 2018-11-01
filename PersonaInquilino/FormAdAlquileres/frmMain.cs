@@ -28,9 +28,9 @@ namespace FormAdAlquileres
 		private void frmMain_Load(object sender, EventArgs e)
 		{
             Departamento a = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-			Departamento a1 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-			Departamento a2 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
-			Departamento a3 = new Departamento("Sarandi 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a1 = new Departamento("Hipolito 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a2 = new Departamento("Alsina 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
+			Departamento a3 = new Departamento("Rivadabia 148", "CABA", DateTime.Now, EEstado.Libre, 2, 35, false, false, false, 1, false, "Baño y concina nuevos", 5, 'A', true);
 			inmuebles.Add(a);
 			inmuebles.Add(a1);
 			inmuebles.Add(a2);
@@ -135,6 +135,22 @@ namespace FormAdAlquileres
 		}
 
 		private void tpInquilino_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			timer2_Tick(sender, e);
+
+		}
+
+		private void tpInquilino_Resize(object sender, EventArgs e)
+		{
+
+		}
+
+		private void frmMain_MaximumSizeChanged(object sender, EventArgs e)
 		{
 
 		}

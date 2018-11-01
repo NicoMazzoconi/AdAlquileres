@@ -51,7 +51,7 @@ namespace FormAdAlquileres
 			Contrato contrato = new Contrato(dtpInicio.Value, dtpFin.Value, float.Parse(txtPrecio.Text), Int32.Parse(txtAumento.Text), inmueble, rtbNota.Text);
 			Inquilino newInq = new Inquilino(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, domicilioInq, emailInq, edadInq, garantia, contrato);
 			inquilinos.Add(newInq);
-			inmueble.Estado = EEstado.Alquilado;
+			//inmueble.Estado = EEstado.Alquilado;
 			this.Close();
 		}
 

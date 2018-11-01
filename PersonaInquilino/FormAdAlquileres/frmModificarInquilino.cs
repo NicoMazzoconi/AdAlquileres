@@ -73,6 +73,7 @@ namespace FormAdAlquileres
 			Sexo sex;
 			Enum.TryParse<Sexo>(cbSexo.SelectedValue.ToString(), out sex);
 			inquilinos[id].Sexo = sex;
+			this.Close();
 		}
 	}
 }

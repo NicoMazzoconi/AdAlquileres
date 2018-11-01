@@ -28,7 +28,8 @@ namespace FormAdAlquileres
 			cbSexo.DataSource = Enum.GetValues(typeof(Sexo));
 			foreach(Inmueble a in inmuebles)
 			{
-				cbInmueble.Items.Add(a.Direccion);
+				if(a.Estado != EEstado.Alquilado)
+					cbInmueble.Items.Add(a.Direccion);
 			}
 		}
 
@@ -53,6 +54,11 @@ namespace FormAdAlquileres
 		private void btCancelar_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void cbInmueble_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

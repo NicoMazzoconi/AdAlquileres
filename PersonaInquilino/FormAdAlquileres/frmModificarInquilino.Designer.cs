@@ -46,6 +46,8 @@
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.btn_cancelar = new System.Windows.Forms.Button();
 			this.btn_ok = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -208,9 +210,10 @@
 			// 
 			// btn_cancelar
 			// 
-			this.btn_cancelar.Location = new System.Drawing.Point(66, 416);
+			this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+			this.btn_cancelar.Location = new System.Drawing.Point(13, 372);
 			this.btn_cancelar.Name = "btn_cancelar";
-			this.btn_cancelar.Size = new System.Drawing.Size(138, 29);
+			this.btn_cancelar.Size = new System.Drawing.Size(138, 39);
 			this.btn_cancelar.TabIndex = 37;
 			this.btn_cancelar.Text = "Cancelar";
 			this.btn_cancelar.UseVisualStyleBackColor = true;
@@ -218,19 +221,42 @@
 			// 
 			// btn_ok
 			// 
-			this.btn_ok.Location = new System.Drawing.Point(476, 416);
+			this.btn_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+			this.btn_ok.Location = new System.Drawing.Point(496, 372);
 			this.btn_ok.Name = "btn_ok";
-			this.btn_ok.Size = new System.Drawing.Size(138, 29);
+			this.btn_ok.Size = new System.Drawing.Size(138, 39);
 			this.btn_ok.TabIndex = 38;
-			this.btn_ok.Text = "Ok";
+			this.btn_ok.Text = "Guardar";
 			this.btn_ok.UseVisualStyleBackColor = true;
 			this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+			// 
+			// button1
+			// 
+			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+			this.button1.Location = new System.Drawing.Point(174, 372);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(138, 39);
+			this.button1.TabIndex = 39;
+			this.button1.Text = "Contrato";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+			this.button2.Location = new System.Drawing.Point(338, 372);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(138, 39);
+			this.button2.TabIndex = 40;
+			this.button2.Text = "Garantia";
+			this.button2.UseVisualStyleBackColor = true;
 			// 
 			// frmModificarInquilino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(645, 457);
+			this.ClientSize = new System.Drawing.Size(645, 420);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.btn_ok);
 			this.Controls.Add(this.btn_cancelar);
 			this.Controls.Add(this.cbSexo);
@@ -277,5 +303,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_ok;
-    }
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button button2;
+	}
 }
