@@ -70,6 +70,18 @@
     <Compile Include="frmAgregarInquilino.Designer.cs">
       <DependentUpon>frmAgregarInquilino.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModificarContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarContrato.Designer.cs">
+      <DependentUpon>frmModificarContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarGarantia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarGarantia.Designer.cs">
+      <DependentUpon>frmModificarGarantia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificarInquilino.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarContrato.resx">
+      <DependentUpon>frmModificarContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarGarantia.resx">
+      <DependentUpon>frmModificarGarantia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarInquilino.resx">
       <DependentUpon>frmModificarInquilino.cs</DependentUpon>

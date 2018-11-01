@@ -48,11 +48,60 @@ namespace FormAdAlquileres
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Contrato contrato = new Contrato(dtpInicio.Value, dtpFin.Value, float.Parse(txtPrecio.Text), Int32.Parse(txtAumento.Text), inmueble, rtbNota.Text);
-			Inquilino newInq = new Inquilino(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, domicilioInq, emailInq, edadInq, garantia, contrato);
-			inquilinos.Add(newInq);
-			//inmueble.Estado = EEstado.Alquilado;
-			this.Close();
+			string mensajeError = "";
+
+			DateTime inicio = DateTime.Now;
+			DateTime fin = DateTime.Now;
+			if (dtpInicio.Value < dtpFin.Value)
+			{
+				inicio = dtpInicio.Value;
+				fin = dtpFin.Value;
+			}
+			else
+			{
+				mensajeError = mensajeError + "Error en las fechas, ";
+				lblFechaFinError.Visible = true;
+				lblFechaInicioError.Visible = true;
+			}
+
+			float precio;
+			if(!(float.TryParse(txtPrecio.Text, out precio)))
+			{
+				mensajeError = mensajeError + "Precio invalido, ";
+				lblPrecioError.Visible = true;
+			}
+
+			int aumento;
+			if(!(int.TryParse(txtAumento.Text, out aumento)))
+			{
+				mensajeError = mensajeError + "Aumento invalido, ";
+				lblAumentoError.Visible = true;
+			}
+
+			int porcAumento;
+			if(!(int.TryParse(txtPorcentaje.Text, out porcAumento)))
+			{
+				mensajeError = mensajeError + "Procentaje invalido, ";
+				lblPorcAumentoError.Visible = true;
+			}
+
+			if(rtbNota.Text is null)
+			{
+				mensajeError = mensajeError + "Nota invalida";
+				lblNotasError.Visible = true;
+			}
+
+			if(mensajeError == "")
+			{
+				Contrato contrato = new Contrato(inicio, fin, precio, aumento, inmueble, rtbNota.Text);
+				Inquilino newInq = new Inquilino(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, domicilioInq, emailInq, edadInq, garantia, contrato);
+				inquilinos.Add(newInq);
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+			}
 		}
 
 		private void button2_Click(object sender, EventArgs e)

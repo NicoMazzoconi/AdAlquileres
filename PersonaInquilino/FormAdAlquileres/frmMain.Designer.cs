@@ -54,11 +54,11 @@
 			this.tbInmueble = new System.Windows.Forms.TabPage();
 			this.btn_agregarDepartamento = new System.Windows.Forms.Button();
 			this.lvPropiedades = new System.Windows.Forms.ListView();
+			this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.Inquilino = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
-			this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.statusFecha.SuspendLayout();
@@ -221,6 +221,7 @@
 			this.btModCont.TabIndex = 6;
 			this.btModCont.Text = "Modificar Contrato";
 			this.btModCont.UseVisualStyleBackColor = true;
+			this.btModCont.Click += new System.EventHandler(this.btModCont_Click);
 			// 
 			// btModGara
 			// 
@@ -233,6 +234,7 @@
 			this.btModGara.TabIndex = 5;
 			this.btModGara.Text = "Modificar Garantia";
 			this.btModGara.UseVisualStyleBackColor = true;
+			this.btModGara.Click += new System.EventHandler(this.btModGara_Click);
 			// 
 			// btnModInq
 			// 
@@ -305,6 +307,7 @@
 			this.tbInmueble.TabIndex = 0;
 			this.tbInmueble.Text = "Propiedades";
 			this.tbInmueble.UseVisualStyleBackColor = true;
+			this.tbInmueble.Click += new System.EventHandler(this.tbInmueble_Click);
 			// 
 			// btn_agregarDepartamento
 			// 
@@ -337,6 +340,12 @@
 			this.lvPropiedades.UseCompatibleStateImageBehavior = false;
 			this.lvPropiedades.View = System.Windows.Forms.View.Details;
 			// 
+			// ID
+			// 
+			this.ID.Text = "ID";
+			this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.ID.Width = 46;
+			// 
 			// Direccion
 			// 
 			this.Direccion.Text = "Direccion";
@@ -364,12 +373,6 @@
 			this.tabControl1.Size = new System.Drawing.Size(1204, 494);
 			this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
 			this.tabControl1.TabIndex = 5;
-			// 
-			// ID
-			// 
-			this.ID.Text = "ID";
-			this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.ID.Width = 46;
 			// 
 			// frmMain
 			// 

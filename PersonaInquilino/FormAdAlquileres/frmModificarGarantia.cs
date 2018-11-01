@@ -11,37 +11,37 @@ using PersonaInquilino;
 
 namespace FormAdAlquileres
 {
-	public partial class frmAgregarGarantia : Form
+	public partial class frmModificarGarantia : Form
 	{
-		private string nombreInq;
-		private string apellidoInq;
-		private double dniInq;
-		private double telefonoInq;
-		private Sexo sexoInq;
-		private string emailInq;
-		private string domicilioInq;
-		private int edadInq;
 		private List<Inquilino> inquilinos;
-		private Inmueble inmueble;
-
-		public frmAgregarGarantia(string nombre, string apellido, double dni, double tel, Sexo sexo, string email, string domicilio, int edad, List<Inquilino> inquilinos, Inmueble inmuebles)
+		private int indexInq;
+		public frmModificarGarantia(List<Inquilino> inquilinos, int index)
 		{
 			InitializeComponent();
-			this.nombreInq = nombre;
-			this.apellidoInq = apellido;
-			this.dniInq = dni;
-			this.telefonoInq = tel;
-			this.sexoInq = sexo;
-			this.emailInq = email;
-			this.domicilioInq = domicilio;
-			this.edadInq = edad;
+
 			this.inquilinos = inquilinos;
-			this.inmueble = inmuebles;
+
+			for (int i = 0; i < inquilinos.Count; i++)		//BUSCA INDEX DE LA LISTA INQUILINO EN BASE AL ID
+			{
+				if (inquilinos[i].ID == index)
+				{
+					indexInq = index;
+				}
+			}
 		}
 
-		private void frmAgregarGarantia_Load(object sender, EventArgs e)
+		private void frmModificarGarantia_Load(object sender, EventArgs e)
 		{
 			cbSexo.DataSource = Enum.GetValues(typeof(Sexo));
+			txtNombre.Text = inquilinos[indexInq].Garantia.Nombre;
+			txtApellido.Text = inquilinos[indexInq].Garantia.Apellido;
+			txtEmail.Text = inquilinos[indexInq].Garantia.Email;
+			txtDomicilio.Text = inquilinos[indexInq].Garantia.Domicilio;
+			txtRelacion.Text = inquilinos[indexInq].Garantia.Relacion;
+			txtDni.Text = inquilinos[indexInq].Garantia.Dni.ToString();
+			txtTelefono.Text = inquilinos[indexInq].Garantia.Telefono.ToString();
+			cbSexo.Text = inquilinos[indexInq].Garantia.Sexo.ToString();
+			nudEdad.Value = inquilinos[indexInq].Garantia.Edad;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace FormAdAlquileres
 				mensajeError = mensajeError + "Apellido invalido, ";
 				lblApellidoError.Visible = true;
 			}
-			if(txtRelacion.Text is null)
+			if (txtRelacion.Text is null)
 			{
 				mensajeError = mensajeError + "Relacion invalida";
 				lblRelacionError.Visible = true;
@@ -98,14 +98,20 @@ namespace FormAdAlquileres
 				mensajeError = mensajeError + "Email invalido.";
 				lblEmailError.Visible = true;
 			}
-			if (mensajeError == "")
+			if (mensajeError == "")															//Si no hay error asiganmos
 			{
-				Garantia garantia = new Garantia(txtNombre.Text, txtApellido.Text, dni, tel, sexo, txtDomicilio.Text, txtEmail.Text, edad, txtRelacion.Text);
-				frmAgregarContrato contrato = new frmAgregarContrato(nombreInq, apellidoInq, dniInq, telefonoInq, sexoInq, emailInq, domicilioInq, edadInq, garantia, inquilinos, inmueble);
-				contrato.Show();
+				inquilinos[indexInq].Garantia.Nombre = txtNombre.Text;				
+				inquilinos[indexInq].Garantia.Apellido = txtApellido.Text;
+				inquilinos[indexInq].Garantia.Email = txtEmail.Text;
+				inquilinos[indexInq].Garantia.Telefono = tel;
+				inquilinos[indexInq].Garantia.Dni = dni;
+				inquilinos[indexInq].Garantia.Edad = edad;
+				inquilinos[indexInq].Garantia.Relacion = txtRelacion.Text;
+				inquilinos[indexInq].Garantia.Sexo = sexo;
+				inquilinos[indexInq].Garantia.Domicilio = txtDomicilio.Text;
 				this.Close();
 			}
-			else
+			else																		//Si hay error mostramos messageBox
 			{
 				MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 			}

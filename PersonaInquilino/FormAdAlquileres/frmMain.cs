@@ -119,7 +119,10 @@ namespace FormAdAlquileres
 				item.SubItems.Add(b.Nombre);
 				item.SubItems.Add(b.Apellido);
 				item.SubItems.Add(b.Telefono.ToString());
-				item.SubItems.Add(b.Contrato.Inmueble.Direccion);
+				if (b.Contrato.Inmueble is Departamento)
+					item.SubItems.Add(b.Contrato.Inmueble.Direccion + ", " + b.Contrato.Inmueble.Mostrar());
+				else
+					item.SubItems.Add(b.Contrato.Inmueble.Direccion);
 				lvInquilino.Items.Add(item);
 			}
 		}
@@ -185,6 +188,23 @@ namespace FormAdAlquileres
 			label2.Height = 13;													//
 			label2.Left = (int)((groupBox2.Right - groupBox2.Left) / 2.25);		//
 			//FIN RESIZE INQUILINO
+		}
+
+		private void tbInmueble_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btModGara_Click(object sender, EventArgs e)
+		{
+			frmModificarGarantia modGar = new frmModificarGarantia(inquilinos, idInquilino);
+			modGar.Show();
+		}
+
+		private void btModCont_Click(object sender, EventArgs e)
+		{
+			frmModificarContrato modCon = new frmModificarContrato(inquilinos, idInquilino);
+			modCon.Show();
 		}
 	}
 }

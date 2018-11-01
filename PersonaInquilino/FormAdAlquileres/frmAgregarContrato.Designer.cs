@@ -42,6 +42,12 @@
 			this.button2 = new System.Windows.Forms.Button();
 			this.txtPorcentaje = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.lblFechaInicioError = new System.Windows.Forms.Label();
+			this.lblFechaFinError = new System.Windows.Forms.Label();
+			this.lblPrecioError = new System.Windows.Forms.Label();
+			this.lblAumentoError = new System.Windows.Forms.Label();
+			this.lblPorcAumentoError = new System.Windows.Forms.Label();
+			this.lblNotasError = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -177,11 +183,83 @@
 			this.label6.TabIndex = 13;
 			this.label6.Text = "% Aumento";
 			// 
+			// lblFechaInicioError
+			// 
+			this.lblFechaInicioError.AutoSize = true;
+			this.lblFechaInicioError.ForeColor = System.Drawing.Color.Red;
+			this.lblFechaInicioError.Location = new System.Drawing.Point(209, 18);
+			this.lblFechaInicioError.Name = "lblFechaInicioError";
+			this.lblFechaInicioError.Size = new System.Drawing.Size(14, 13);
+			this.lblFechaInicioError.TabIndex = 54;
+			this.lblFechaInicioError.Text = "X";
+			this.lblFechaInicioError.Visible = false;
+			// 
+			// lblFechaFinError
+			// 
+			this.lblFechaFinError.AutoSize = true;
+			this.lblFechaFinError.ForeColor = System.Drawing.Color.Red;
+			this.lblFechaFinError.Location = new System.Drawing.Point(209, 63);
+			this.lblFechaFinError.Name = "lblFechaFinError";
+			this.lblFechaFinError.Size = new System.Drawing.Size(14, 13);
+			this.lblFechaFinError.TabIndex = 53;
+			this.lblFechaFinError.Text = "X";
+			this.lblFechaFinError.Visible = false;
+			// 
+			// lblPrecioError
+			// 
+			this.lblPrecioError.AutoSize = true;
+			this.lblPrecioError.ForeColor = System.Drawing.Color.Red;
+			this.lblPrecioError.Location = new System.Drawing.Point(209, 104);
+			this.lblPrecioError.Name = "lblPrecioError";
+			this.lblPrecioError.Size = new System.Drawing.Size(14, 13);
+			this.lblPrecioError.TabIndex = 52;
+			this.lblPrecioError.Text = "X";
+			this.lblPrecioError.Visible = false;
+			// 
+			// lblAumentoError
+			// 
+			this.lblAumentoError.AutoSize = true;
+			this.lblAumentoError.ForeColor = System.Drawing.Color.Red;
+			this.lblAumentoError.Location = new System.Drawing.Point(209, 145);
+			this.lblAumentoError.Name = "lblAumentoError";
+			this.lblAumentoError.Size = new System.Drawing.Size(14, 13);
+			this.lblAumentoError.TabIndex = 51;
+			this.lblAumentoError.Text = "X";
+			this.lblAumentoError.Visible = false;
+			// 
+			// lblPorcAumentoError
+			// 
+			this.lblPorcAumentoError.AutoSize = true;
+			this.lblPorcAumentoError.ForeColor = System.Drawing.Color.Red;
+			this.lblPorcAumentoError.Location = new System.Drawing.Point(208, 186);
+			this.lblPorcAumentoError.Name = "lblPorcAumentoError";
+			this.lblPorcAumentoError.Size = new System.Drawing.Size(14, 13);
+			this.lblPorcAumentoError.TabIndex = 50;
+			this.lblPorcAumentoError.Text = "X";
+			this.lblPorcAumentoError.Visible = false;
+			// 
+			// lblNotasError
+			// 
+			this.lblNotasError.AutoSize = true;
+			this.lblNotasError.ForeColor = System.Drawing.Color.Red;
+			this.lblNotasError.Location = new System.Drawing.Point(209, 227);
+			this.lblNotasError.Name = "lblNotasError";
+			this.lblNotasError.Size = new System.Drawing.Size(14, 13);
+			this.lblNotasError.TabIndex = 49;
+			this.lblNotasError.Text = "X";
+			this.lblNotasError.Visible = false;
+			// 
 			// frmAgregarContrato
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(708, 430);
+			this.Controls.Add(this.lblFechaInicioError);
+			this.Controls.Add(this.lblFechaFinError);
+			this.Controls.Add(this.lblPrecioError);
+			this.Controls.Add(this.lblAumentoError);
+			this.Controls.Add(this.lblPorcAumentoError);
+			this.Controls.Add(this.lblNotasError);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.txtPorcentaje);
 			this.Controls.Add(this.button2);
@@ -220,5 +298,11 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.TextBox txtPorcentaje;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label lblFechaInicioError;
+		private System.Windows.Forms.Label lblFechaFinError;
+		private System.Windows.Forms.Label lblPrecioError;
+		private System.Windows.Forms.Label lblAumentoError;
+		private System.Windows.Forms.Label lblPorcAumentoError;
+		private System.Windows.Forms.Label lblNotasError;
 	}
 }

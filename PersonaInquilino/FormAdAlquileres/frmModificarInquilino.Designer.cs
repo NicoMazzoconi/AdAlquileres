@@ -46,8 +46,14 @@
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.btn_cancelar = new System.Windows.Forms.Button();
 			this.btn_ok = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.lblSexoError = new System.Windows.Forms.Label();
+			this.lblNombreError = new System.Windows.Forms.Label();
+			this.lblApellidoError = new System.Windows.Forms.Label();
+			this.lblDniError = new System.Windows.Forms.Label();
+			this.lblTelefonoError = new System.Windows.Forms.Label();
+			this.lblEmailError = new System.Windows.Forms.Label();
+			this.lblDomicilioError = new System.Windows.Forms.Label();
+			this.lblEdadError = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -230,33 +236,107 @@
 			this.btn_ok.UseVisualStyleBackColor = true;
 			this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
 			// 
-			// button1
+			// lblSexoError
 			// 
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-			this.button1.Location = new System.Drawing.Point(174, 372);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(138, 39);
-			this.button1.TabIndex = 39;
-			this.button1.Text = "Contrato";
-			this.button1.UseVisualStyleBackColor = true;
+			this.lblSexoError.AutoSize = true;
+			this.lblSexoError.ForeColor = System.Drawing.Color.Red;
+			this.lblSexoError.Location = new System.Drawing.Point(169, 325);
+			this.lblSexoError.Name = "lblSexoError";
+			this.lblSexoError.Size = new System.Drawing.Size(14, 13);
+			this.lblSexoError.TabIndex = 49;
+			this.lblSexoError.Text = "X";
+			this.lblSexoError.Visible = false;
 			// 
-			// button2
+			// lblNombreError
 			// 
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-			this.button2.Location = new System.Drawing.Point(338, 372);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(138, 39);
-			this.button2.TabIndex = 40;
-			this.button2.Text = "Garantia";
-			this.button2.UseVisualStyleBackColor = true;
+			this.lblNombreError.AutoSize = true;
+			this.lblNombreError.ForeColor = System.Drawing.Color.Red;
+			this.lblNombreError.Location = new System.Drawing.Point(169, 32);
+			this.lblNombreError.Name = "lblNombreError";
+			this.lblNombreError.Size = new System.Drawing.Size(14, 13);
+			this.lblNombreError.TabIndex = 48;
+			this.lblNombreError.Text = "X";
+			this.lblNombreError.Visible = false;
+			// 
+			// lblApellidoError
+			// 
+			this.lblApellidoError.AutoSize = true;
+			this.lblApellidoError.ForeColor = System.Drawing.Color.Red;
+			this.lblApellidoError.Location = new System.Drawing.Point(169, 77);
+			this.lblApellidoError.Name = "lblApellidoError";
+			this.lblApellidoError.Size = new System.Drawing.Size(14, 13);
+			this.lblApellidoError.TabIndex = 47;
+			this.lblApellidoError.Text = "X";
+			this.lblApellidoError.Visible = false;
+			// 
+			// lblDniError
+			// 
+			this.lblDniError.AutoSize = true;
+			this.lblDniError.ForeColor = System.Drawing.Color.Red;
+			this.lblDniError.Location = new System.Drawing.Point(169, 118);
+			this.lblDniError.Name = "lblDniError";
+			this.lblDniError.Size = new System.Drawing.Size(14, 13);
+			this.lblDniError.TabIndex = 46;
+			this.lblDniError.Text = "X";
+			this.lblDniError.Visible = false;
+			// 
+			// lblTelefonoError
+			// 
+			this.lblTelefonoError.AutoSize = true;
+			this.lblTelefonoError.ForeColor = System.Drawing.Color.Red;
+			this.lblTelefonoError.Location = new System.Drawing.Point(169, 159);
+			this.lblTelefonoError.Name = "lblTelefonoError";
+			this.lblTelefonoError.Size = new System.Drawing.Size(14, 13);
+			this.lblTelefonoError.TabIndex = 45;
+			this.lblTelefonoError.Text = "X";
+			this.lblTelefonoError.Visible = false;
+			// 
+			// lblEmailError
+			// 
+			this.lblEmailError.AutoSize = true;
+			this.lblEmailError.ForeColor = System.Drawing.Color.Red;
+			this.lblEmailError.Location = new System.Drawing.Point(168, 200);
+			this.lblEmailError.Name = "lblEmailError";
+			this.lblEmailError.Size = new System.Drawing.Size(14, 13);
+			this.lblEmailError.TabIndex = 44;
+			this.lblEmailError.Text = "X";
+			this.lblEmailError.Visible = false;
+			// 
+			// lblDomicilioError
+			// 
+			this.lblDomicilioError.AutoSize = true;
+			this.lblDomicilioError.ForeColor = System.Drawing.Color.Red;
+			this.lblDomicilioError.Location = new System.Drawing.Point(169, 241);
+			this.lblDomicilioError.Name = "lblDomicilioError";
+			this.lblDomicilioError.Size = new System.Drawing.Size(14, 13);
+			this.lblDomicilioError.TabIndex = 43;
+			this.lblDomicilioError.Text = "X";
+			this.lblDomicilioError.Visible = false;
+			// 
+			// lblEdadError
+			// 
+			this.lblEdadError.AutoSize = true;
+			this.lblEdadError.ForeColor = System.Drawing.Color.Red;
+			this.lblEdadError.Location = new System.Drawing.Point(169, 282);
+			this.lblEdadError.Name = "lblEdadError";
+			this.lblEdadError.Size = new System.Drawing.Size(14, 13);
+			this.lblEdadError.TabIndex = 42;
+			this.lblEdadError.Text = "X";
+			this.lblEdadError.Visible = false;
 			// 
 			// frmModificarInquilino
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(645, 420);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.lblSexoError);
+			this.Controls.Add(this.lblNombreError);
+			this.Controls.Add(this.lblApellidoError);
+			this.Controls.Add(this.lblDniError);
+			this.Controls.Add(this.lblTelefonoError);
+			this.Controls.Add(this.lblEmailError);
+			this.Controls.Add(this.lblDomicilioError);
+			this.Controls.Add(this.lblEdadError);
 			this.Controls.Add(this.btn_ok);
 			this.Controls.Add(this.btn_cancelar);
 			this.Controls.Add(this.cbSexo);
@@ -303,7 +383,13 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_ok;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label lblSexoError;
+		private System.Windows.Forms.Label lblNombreError;
+		private System.Windows.Forms.Label lblApellidoError;
+		private System.Windows.Forms.Label lblDniError;
+		private System.Windows.Forms.Label lblTelefonoError;
+		private System.Windows.Forms.Label lblEmailError;
+		private System.Windows.Forms.Label lblDomicilioError;
+		private System.Windows.Forms.Label lblEdadError;
 	}
 }
