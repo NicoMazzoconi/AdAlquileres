@@ -14,31 +14,65 @@ namespace FormAdAlquileres
 	public partial class frmModificarInquilino : Form
 	{
         private List<Inquilino> inquilinos;
-		private int index;
+		private int id;
 
-        public frmModificarInquilino(List<Inquilino> inquilinos, int index)
+		public frmModificarInquilino(List<Inquilino> inquilinos, int index)
 		{
 			InitializeComponent();
 			this.inquilinos = inquilinos;
-			this.index = index;
+			for(int i = 0; i < inquilinos.Count; i++)
+			{
+				if(inquilinos[i].ID == index)
+				{
+					id = index;
+				}
+			}
 		}
 
 		private void frmModificar_Load(object sender, EventArgs e)
 		{
-			txtNombre.Text = inquilinos[index].Nombre;
-			txtApellido.Text = inquilinos[index].Apellido;
-			txtDni.Text = inquilinos[index].Dni.ToString();
-			txtTelefono.Text = inquilinos[index].Telefono.ToString();
-			txtEmail.Text = inquilinos[index].Email;
-			txtDomicilio.Text = inquilinos[index].Domicilio;
-			nudEdad.Value = inquilinos[index].Edad;
-			cbSexo.SelectedValue = inquilinos[index].Sexo.ToString();
-			cbInmueble.SelectedValue = inquilinos[index].Contrato.Inmueble.Direccion;
+			cbSexo.DataSource = Enum.GetValues(typeof(Sexo));
+			txtNombre.Text = inquilinos[id].Nombre;
+			txtApellido.Text = inquilinos[id].Apellido;
+			txtDni.Text = inquilinos[id].Dni.ToString();
+			txtTelefono.Text = inquilinos[id].Telefono.ToString();
+			txtEmail.Text = inquilinos[id].Email;
+			txtDomicilio.Text = inquilinos[id].Domicilio;
+			nudEdad.Value = inquilinos[id].Edad;
+			cbSexo.Text = inquilinos[id].Sexo.ToString();
 		}
 
 		private void txtNombre_TextChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void txtDomicilio_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btn_cancelar_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void btn_ok_Click(object sender, EventArgs e)
+		{
+			inquilinos[id].Nombre = txtNombre.Text;
+			inquilinos[id].Apellido = txtApellido.Text;
+			double dni;
+			if (double.TryParse(txtDni.Text, out dni))
+				inquilinos[id].Dni = dni;
+			double tel;
+			if (double.TryParse(txtTelefono.Text, out tel))
+				inquilinos[id].Telefono = tel;
+			inquilinos[id].Email = txtEmail.Text;
+			inquilinos[id].Domicilio = txtDomicilio.Text;
+			inquilinos[id].Edad = (int)nudEdad.Value;
+			Sexo sex;
+			Enum.TryParse<Sexo>(cbSexo.SelectedValue.ToString(), out sex);
+			inquilinos[id].Sexo = sex;
 		}
 	}
 }

@@ -28,8 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.cbInmueble = new System.Windows.Forms.ComboBox();
-			this.label9 = new System.Windows.Forms.Label();
 			this.cbSexo = new System.Windows.Forms.ComboBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.nudEdad = new System.Windows.Forms.NumericUpDown();
@@ -50,25 +48,6 @@
 			this.btn_ok = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// cbInmueble
-			// 
-			this.cbInmueble.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-			this.cbInmueble.FormattingEnabled = true;
-			this.cbInmueble.Location = new System.Drawing.Point(188, 351);
-			this.cbInmueble.Name = "cbInmueble";
-			this.cbInmueble.Size = new System.Drawing.Size(443, 37);
-			this.cbInmueble.TabIndex = 36;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-			this.label9.Location = new System.Drawing.Point(40, 359);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(117, 29);
-			this.label9.TabIndex = 35;
-			this.label9.Text = "Inmueble";
 			// 
 			// cbSexo
 			// 
@@ -184,6 +163,7 @@
 			this.txtDomicilio.Name = "txtDomicilio";
 			this.txtDomicilio.Size = new System.Drawing.Size(443, 35);
 			this.txtDomicilio.TabIndex = 24;
+			this.txtDomicilio.TextChanged += new System.EventHandler(this.txtDomicilio_TextChanged);
 			// 
 			// txtEmail
 			// 
@@ -234,6 +214,7 @@
 			this.btn_cancelar.TabIndex = 37;
 			this.btn_cancelar.Text = "Cancelar";
 			this.btn_cancelar.UseVisualStyleBackColor = true;
+			this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
 			// 
 			// btn_ok
 			// 
@@ -243,6 +224,7 @@
 			this.btn_ok.TabIndex = 38;
 			this.btn_ok.Text = "Ok";
 			this.btn_ok.UseVisualStyleBackColor = true;
+			this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
 			// 
 			// frmModificarInquilino
 			// 
@@ -251,8 +233,6 @@
 			this.ClientSize = new System.Drawing.Size(645, 457);
 			this.Controls.Add(this.btn_ok);
 			this.Controls.Add(this.btn_cancelar);
-			this.Controls.Add(this.cbInmueble);
-			this.Controls.Add(this.label9);
 			this.Controls.Add(this.cbSexo);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.nudEdad);
@@ -279,9 +259,6 @@
 		}
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbInmueble;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown nudEdad;

@@ -10,12 +10,28 @@ namespace PersonaInquilino
 	{
 		private Garantia garantia;
 		private Contrato contrato;
+		private int id;
+		private static int nextId;
 
+		static Inquilino()
+		{
+			nextId = 0;
+		}
 
 		public Inquilino(string nombre, string apellido, double dni, double telefono, Sexo sexo, string domicilio, string email, int edad, Garantia garantia, Contrato contrato) : base(nombre, apellido, dni, telefono, sexo, email, domicilio, edad)
 		{
 			this.garantia = garantia;
 			this.contrato = contrato;
+			id = nextId;
+			nextId++;
+		}
+
+		public int ID
+		{
+			get
+			{
+				return id;
+			}
 		}
 
 		public override string Nombre
@@ -26,14 +42,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if (value.Length > 2 && value.Length < 25)
-				{
-					foreach (char letra in value)
-					{
-						if ((letra > 'a' && letra < 'z') || (letra > 'A' && letra < 'Z'))
-							nombre = value;
-					}
-				}
+				nombre = value;
 			}
 		}
 
@@ -45,14 +54,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if (value.Length > 2 && value.Length < 25)
-				{
-					foreach (char letra in value)
-					{
-						if ((letra > 'a' && letra < 'z') || (letra > 'A' && letra < 'Z'))
-							nombre = value;
-					}
-				}
+				apellido = value;
 			}
 		}
 
@@ -64,8 +66,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if (dni > 1000000 && dni < 99999999)
-					dni = value;
+				dni = value;
 			}
 		}
 
@@ -77,8 +78,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if (value.ToString().Length > 6) // ej 477344 && 02396546092 (convierto a string para ver la cantidad de letras y de ahi estimo las necesarios para que sea un numero valido)
-					telefono = value;
+				telefono = value;
 			}
 		}
 
@@ -102,10 +102,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if (value.Length > 8)
-				{
-					domicilio = value;
-				}
+				domicilio = value;
 			}
 		}
 
@@ -129,8 +126,7 @@ namespace PersonaInquilino
 			}
 			set
 			{
-				if(value > 17)
-					this.edad = value;
+				this.edad = value;
 			}
 		}
 

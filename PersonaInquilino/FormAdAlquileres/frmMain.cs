@@ -15,7 +15,7 @@ namespace FormAdAlquileres
 	{
 		private List<Inquilino> inquilinos;
 		private List<Inmueble> inmuebles;
-
+		private int idInquilino;
         
 
 		public frmMain()
@@ -35,6 +35,16 @@ namespace FormAdAlquileres
 			inmuebles.Add(a1);
 			inmuebles.Add(a2);
 			inmuebles.Add(a3);
+
+			Inquilino b = new Inquilino("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssssssssd", "asdasdsadas", 25, new Garantia("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, "ss"), new Contrato(DateTime.Now, DateTime.Now, 222, 12, a, "sss"));
+			Inquilino b1 = new Inquilino("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, new Garantia("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, "ss"), new Contrato(DateTime.Now, DateTime.Now, 222, 12, a1, "sss"));
+			Inquilino b2 = new Inquilino("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, new Garantia("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, "ss"), new Contrato(DateTime.Now, DateTime.Now, 222, 12, a2, "sss"));
+			Inquilino b3 = new Inquilino("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, new Garantia("Nico", "Mazzo", 1232, 123123, Sexo.Hombre, "ssss", "ssss", 25, "ss"), new Contrato(DateTime.Now, DateTime.Now, 222, 12, a3, "sss"));
+			inquilinos.Add(b);
+			inquilinos.Add(b1);
+			inquilinos.Add(b2);
+			inquilinos.Add(b3);
+
 			timer2_Tick( sender,  e);
 		}
 
@@ -95,7 +105,8 @@ namespace FormAdAlquileres
 
 			foreach(Inquilino b in inquilinos)
 			{
-				ListViewItem item = new ListViewItem(b.Nombre);
+				ListViewItem item = new ListViewItem(b.ID.ToString());
+				item.SubItems.Add(b.Nombre);
 				item.SubItems.Add(b.Apellido);
 				item.SubItems.Add(b.Telefono.ToString());
 				item.SubItems.Add(b.Contrato.Inmueble.Direccion);
@@ -105,12 +116,27 @@ namespace FormAdAlquileres
 
 		private void listView2_SelectedIndexChanged(object sender, EventArgs e)
 		{
-
+			if(lvInquilino.SelectedItems.Count > 0)
+			{
+				ListViewItem index = lvInquilino.SelectedItems[0];
+				idInquilino = Convert.ToInt32(index.SubItems[0].Text);
+			}
 		}
 
         private void btn_agregarDepartamento_Click(object sender, EventArgs e)
         {
 
         }
-    }
+
+		private void button2_Click_1(object sender, EventArgs e)
+		{
+			frmModificarInquilino modInq = new frmModificarInquilino(inquilinos, idInquilino);
+			modInq.Show();
+		}
+
+		private void tpInquilino_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

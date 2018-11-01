@@ -33,6 +33,8 @@ namespace PersonaInquilino
 			this.telefono = telefono;
 			this.sexo = sexo;
 			this.edad = edad;
+			this.email = email;
+			this.domicilio = domicilio;
 		}
 		#endregion
 
